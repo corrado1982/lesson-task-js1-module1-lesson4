@@ -13,3 +13,23 @@ const games = [
         released: 2020
     }
 ];
+
+//Question 1
+
+function printSeason(season) {
+    console.log(season);
+}
+
+printSeason("summer");
+
+//Question 2
+
+function printNumbers(firstNumber, secondNumber) {
+    console.log(firstNumber);
+    console.log(secondNumber);
+}
+
+printNumbers(3, 6);
+
+
+//Question 3
