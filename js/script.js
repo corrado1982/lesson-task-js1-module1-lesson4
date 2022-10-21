@@ -33,3 +33,5 @@ printNumbers(3, 6);
 
 
 //Question 3
+
+function addNumbers()
