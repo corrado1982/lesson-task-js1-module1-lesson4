@@ -66,3 +66,32 @@ function printListItems(listItems) {
 }
 
 printListItems(sports);
+
+//Question 6
+innerDivGames = document.querySelector(".game-container");
+console.log(innerDivGames);
+
+// let names = "";
+// let releas = "";
+function createGames(parametr) {
+    let innGamesHtml = "";
+    for (let i = 0; i < parametr.length; i++) {
+        // let names = parametr[i].name;
+        // let releas = parametr[i].released;
+// innGamesHtml =`<h2>${parametr[i].name}</h2>
+//                 <p>${parametr[i].released}</p>`;
+//                 return innGamesHtml;
+    
+
+innGamesHtml +=`<div>
+                    <h2>${parametr[i].name}</h2>
+                    <p>${parametr[i].released}</p>
+                    </div>`;
+                
+            }
+            return innGamesHtml;
+     }
+
+createGames(games);
+
+innerDivGames.innerHTML += innGamesHtml;
