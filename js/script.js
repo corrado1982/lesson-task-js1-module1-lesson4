@@ -67,9 +67,9 @@ function printListItems(listItems) {
 
 printListItems(sports);
 
-//Question 6
+//Question 6 NON FINITO MANCA IF
 innerDivGames = document.querySelector(".game-container");
-console.log(innerDivGames);
+// console.log(innerDivGames);
 
 // let names = "";
 // let releas = "";
@@ -77,11 +77,14 @@ function createGames(parametr) {
     let innGamesHtml = "";
     for (let i = 0; i < parametr.length; i++) {
         // let names = parametr[i].name;
-        // let releas = parametr[i].released;
+        let releas = parametr[i].released;
 // innGamesHtml =`<h2>${parametr[i].name}</h2>
 //                 <p>${parametr[i].released}</p>`;
 //                 return innGamesHtml;
-    
+
+    if (!releas) {
+        parametr[i].released = "release missing";
+    }
 
 innGamesHtml +=`<div>
                     <h2>${parametr[i].name}</h2>
@@ -92,6 +95,6 @@ innGamesHtml +=`<div>
             return innGamesHtml;
      }
 
-createGames(games);
+let insertHtml = createGames(games);
 
-innerDivGames.innerHTML += innGamesHtml;
+innerDivGames.innerHTML = insertHtml;
